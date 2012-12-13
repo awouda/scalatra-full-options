@@ -1,0 +1,37 @@
+- attributes("title") = "Scalatra: a tiny, Sinatra-like web framework for Scala"
+-@ val lots: List[com.jtm.domain.model.Lot]
+
+
+
+
+.container-fluid
+    .row-fluid
+        .span2
+        .span8
+            .page-header
+                .alert.alert-info
+                    %h1 Lot overview
+
+
+
+    .row-fluid
+        .span2
+            - render ("../leftmenu.scaml")
+
+        .span8
+            %table.table.table-striped
+                %tr
+                    %th #
+                    %th name
+                    %th description
+                    %th bid
+                - for (lot <- lots)
+                    %tr
+                        %td =lot.id
+                        %td =lot.name
+                        %td =lot.description
+                        %td =lot.bid
+
+
+
+
