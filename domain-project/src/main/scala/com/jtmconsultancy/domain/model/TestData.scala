@@ -1,4 +1,4 @@
-package com.jtm.domain.model
+package com.jtmconsultancy.domain.model
 
 object TestData {
 

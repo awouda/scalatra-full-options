@@ -1,4 +1,4 @@
-package com.jtm.domain
+package com.jtmconsultancy.domain
 
 import db.{ScalatraEntitiesDB}
 import org.squeryl.PrimitiveTypeMode._

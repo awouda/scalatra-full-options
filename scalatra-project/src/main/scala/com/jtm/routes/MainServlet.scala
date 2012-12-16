@@ -1,8 +1,4 @@
-package scalatrademo
-
-import org.scalatra._
-import scalate.{ScalateI18nSupport, ScalateSupport}
-import com.jtm.routes.JTMBaseServlet
+package com.jtm.routes
 
 class MainServlet extends JTMBaseServlet {
 

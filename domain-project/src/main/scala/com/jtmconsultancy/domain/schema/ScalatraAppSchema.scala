@@ -1,9 +1,9 @@
-package com.jtm.domain.schema
+package com.jtmconsultancy.domain.schema
 
 import org.squeryl.Schema
 import org.squeryl.PrimitiveTypeMode._
 import org.squeryl.KeyedEntity
-import com.jtm.domain.model.Lot
+import com.jtmconsultancy.domain.model.Lot
 
 //import org.joda.time.Interval
 

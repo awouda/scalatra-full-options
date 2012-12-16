@@ -1,8 +1,8 @@
-package com.jtm.domain
+package com.jtmconsultancy.domain
 
 import db.ScalatraEntitiesDB
-import com.jtm.domain.model._
-import com.jtm.domain.schema.ScalatraAppSchema._
+import com.jtmconsultancy.domain.model._
+import com.jtmconsultancy.domain.schema.ScalatraAppSchema._
 
 import org.scalatest.{BeforeAndAfter, FunSuite}
 import org.squeryl.PrimitiveTypeMode._

@@ -1,6 +1,6 @@
-package com.jtm.domain.model
+package com.jtmconsultancy.domain.model
 
-import com.jtm.domain.schema.ScalatraEntity
+import com.jtmconsultancy.domain.schema.ScalatraEntity
 
 
 case class Lot(

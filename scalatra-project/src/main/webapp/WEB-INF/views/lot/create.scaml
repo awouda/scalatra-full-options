@@ -16,4 +16,20 @@
             - render ("../leftmenu.scaml")
 
         .span8
-            here a form...
+            %form.form-horizontal(method="post" action="post")
+                .control-group
+                    %label.control-label(for="name") Name
+                    .controls
+                        %input(type="text" name="name" id="inputName" placeHolder="name")
+                .control-group
+                    %label.control-label(for="name") Description
+                    .controls
+                        %input(type="text" name="description" id="inputDescription" placeHolder="description")
+                .control-group
+                    %label.control-label(for="name") Start bid
+                    .controls
+                        %input(type="text" name="bid" id="inputBid" placeHolder="bid")
+                .control-group
+                    .controls
+                        %button.btn.btn-primary(type="submit" name="btn") save
+                        %button.btn(name="btn" value="cancel") cancel

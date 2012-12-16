@@ -1,10 +1,7 @@
-import com.jtm.domain.db.ScalatraEntitiesDB
-import com.jtm.domain.model.TestData
-import scalatrademo._
+import com.jtm.routes.{MainServlet, LotServlet}
+import com.jtmconsultancy.domain.db.ScalatraEntitiesDB
 import org.scalatra._
 import javax.servlet.ServletContext
-import org.squeryl.PrimitiveTypeMode._
-import com.jtm.domain.schema.ScalatraAppSchema._
 
 /**
  * This is the Scalatra bootstrap file. You can use it to mount servlets or
