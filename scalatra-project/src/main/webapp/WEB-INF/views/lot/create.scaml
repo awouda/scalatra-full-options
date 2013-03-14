@@ -1,4 +1,5 @@
 - attributes("title") = "Scalatra: a tiny, Sinatra-like web framework for Scala"
+-@ val auctions: List[com.jtmconsultancy.domain.model.Auction]
 
 
 .container-fluid
@@ -29,6 +30,13 @@
                     %label.control-label(for="name") Start bid
                     .controls
                         %input(type="text" name="bid" id="inputBid" placeHolder="bid")
+                .control-group
+                    %label.control-label(for="auctionId") Auction
+                    .controls
+                        %select(name="auctionId")
+                            - for (auction <- auctions)
+                                %option(value={auction.id}) =auction.name
+
                 .control-group
                     .controls
                         %button.btn.btn-primary(type="submit" name="btn") save

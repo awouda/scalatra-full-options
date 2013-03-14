@@ -10,6 +10,7 @@ import java.util.Date
 
 class AuctionServlet extends ScalatraServlet with ScalateSupport with DBSessionSuport {
 
+  val format = new java.text.SimpleDateFormat("dd-MM-yyyy")
 
   before() {
     contentType = "text/html"
@@ -34,7 +35,7 @@ class AuctionServlet extends ScalatraServlet with ScalateSupport with DBSessionS
     action match {
       case "cancel" => redirect("list")
       case _ => {
-        val newAuction = Auction(params("name"), params("description"),new Date() )
+        val newAuction = Auction(params("name"), params("description"),format.parse(params("startDate")) )
         auctions_table.insert(newAuction)
         redirect("list")
       }

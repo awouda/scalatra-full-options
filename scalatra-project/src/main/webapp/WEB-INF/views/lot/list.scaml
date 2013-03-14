@@ -25,12 +25,14 @@
                     %th name
                     %th description
                     %th bid
+                    %th auction
                 - for (lot <- lots)
                     %tr
                         %td =lot.id
                         %td =lot.name
                         %td =lot.description
                         %td =lot.bid
+                        %td =lot.auction.head.name
 
 
 
