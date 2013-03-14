@@ -1,0 +1,39 @@
+- attributes("title") = "Scalatra: a tiny, Sinatra-like web framework for Scala"
+-@ val auctions: List[com.jtmconsultancy.domain.model.Auction]
+
+
+
+
+.container-fluid
+    .row-fluid
+        .span2
+        .span8
+            .page-header
+                .alert.alert-info
+                    %h1 Auction overview
+
+
+
+    .row-fluid
+        .span2
+            - render ("../leftmenu.scaml")
+
+        .span8
+            %table.table.table-striped
+                %tr
+                    %th #
+                    %th name
+                    %th description
+                    %th start date
+                    %th # of lots
+                - for (auction <- auctions)
+                    %tr
+                        %td =auction.id
+                        %td =auction.name
+                        %td =auction.description
+                        %td =auction.startDate
+                        %td =auction.lots.size
+
+
+
+

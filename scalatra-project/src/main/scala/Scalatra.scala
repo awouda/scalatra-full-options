@@ -1,4 +1,4 @@
-import com.jtm.routes.{MainServlet, LotServlet}
+import com.jtm.routes.{AuctionServlet, MainServlet, LotServlet}
 import com.jtmconsultancy.domain.db.ScalatraEntitiesDB
 import org.scalatra._
 import javax.servlet.ServletContext
@@ -17,5 +17,6 @@ class Scalatra extends LifeCycle {
     // Mount one or more servlets
     context.mount(new MainServlet, "/*")
     context.mount(new LotServlet, "/lot/*")
+    context.mount(new AuctionServlet, "/auction/*")
   }
 }

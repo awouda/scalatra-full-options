@@ -19,7 +19,8 @@ class LotServlet extends ScalatraServlet with ScalateSupport with DBSessionSupor
   }
 
   get("/create") {
-    scaml("/lot/create")
+    val getAllAuctions = auctions.toList
+    scaml("/lot/create",("auctions",getAllAuctions))
   }
 
   get("/list") {
@@ -35,14 +36,11 @@ class LotServlet extends ScalatraServlet with ScalateSupport with DBSessionSupor
     action match {
       case "cancel" => redirect("list")
       case _ => {
-        val newLot = Lot(params("name"), params("description"),params("bid").toDouble)
+        val newLot = Lot(params("name"), params("description"),params("bid").toDouble, params("auctionId").toLong)
         lots_table.insert(newLot)
         redirect("list")
       }
     }
-
-
-
 
   }
 

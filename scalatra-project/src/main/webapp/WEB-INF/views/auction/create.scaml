@@ -1,0 +1,35 @@
+- attributes("title") = "Scalatra: a tiny, Sinatra-like web framework for Scala"
+
+
+.container-fluid
+    .row-fluid
+        .span2
+        .span8
+            .page-header
+                .alert.alert-info
+                    %h1 Create new auction
+
+
+
+    .row-fluid
+        .span2
+            - render ("../leftmenu.scaml")
+
+        .span8
+            %form.form-horizontal(method="post" action="post")
+                .control-group
+                    %label.control-label(for="name") Name
+                    .controls
+                        %input(type="text" name="name" id="inputName" placeHolder="name")
+                .control-group
+                    %label.control-label(for="name") Description
+                    .controls
+                        %input(type="text" name="description" id="inputDescription" placeHolder="description")
+                .control-group
+                    %label.control-label(for="name") Start date
+                    .controls
+                        %input(type="text" name="startDate" id="inputBid" placeHolder="DD-MM-YYYY")
+                .control-group
+                    .controls
+                        %button.btn.btn-primary(type="submit" name="btn") save
+                        %button.btn(name="btn" value="cancel") cancel
